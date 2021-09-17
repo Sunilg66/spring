@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.xworkz.database.Database" id="database">
+		<constructor-arg value="${url}"></constructor-arg>
+		<constructor-arg value="${username}"></constructor-arg>
+		<constructor-arg value="${password}"></constructor-arg>
+
+	</bean>
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="database.properties"></property>
+	</bean>
+	<bean class="java.lang.String" id="s1">
+	<constructor-arg value="sunil"></constructor-arg>
+	</bean>
+		
+	<bean class="java.lang.Integer" id="i1">
+		<constructor-arg value="45"></constructor-arg>
+    </bean>
+    <bean class="java.lang.Double" id="d1">
+		<constructor-arg value="45.55"></constructor-arg>
+    </bean>
+     <bean class="java.lang.Float" id="f1">
+		<constructor-arg value="450.55"></constructor-arg>
+    </bean>
+    <bean class="java.lang.Long" id="l1">
+		<constructor-arg value="8861484849"></constructor-arg>
+    </bean>
+    <bean class="java.lang.Boolean" id="b1">
+		<constructor-arg value="true"></constructor-arg>
+    </bean>
+    <bean class="java.lang.Short" id="sh1">
+		<constructor-arg value="60"></constructor-arg>
+    </bean>
+   
+</beans>
