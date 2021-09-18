@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+           
+           <bean class="com.xworkz.fruit.Fruit" id="fruit">
+		<constructor-arg name="name" value="Apple" />
+		<constructor-arg name="color" value="Red" />
+		<constructor-arg name="price" value="250" />
+		<constructor-arg name="taste" value="true" />
+		<constructor-arg name="vitamin" ref="vitaminId" />
+
+	</bean>
+	<bean class="com.xworkz.fruit.Vitamin" id="vitaminId">
+		<constructor-arg name="type" value="Vitamin A" />
+		<constructor-arg name="waterSoluble" value="true" />
+		<constructor-arg name="fatSoluble" value="true" />
+	</bean>
+	
+	<bean class="com.xworkz.footwear.Footwear" id="footwear" >
+	<constructor-arg name="brand" value="Lunars" />
+	<constructor-arg name="color" value="Blue" />
+	<constructor-arg name="price" value="300.0" />
+	<constructor-arg name="material" ref="materialId" />
+	</bean>
+	
+	<bean class="com.xworkz.footwear.Material" id="materialId" >
+	<constructor-arg name="leather" value="suede" />
+	<constructor-arg name="rubber" value="natural" />
+	<constructor-arg name="cloth" value="woolen" />
+	</bean>
+
+
+</beans>
