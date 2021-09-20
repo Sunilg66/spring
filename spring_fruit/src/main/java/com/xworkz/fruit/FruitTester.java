@@ -11,17 +11,14 @@ public class FruitTester {
 		ApplicationContext context = new ClassPathXmlApplicationContext(beanConfigurationFile);
 		
 		Fruit fruit = context.getBean(Fruit.class);
-		System.out.println(fruit.name);		
-		System.out.println(fruit.color);
-		System.out.println(fruit.price);
-		System.out.println(fruit.taste);
+		System.out.println(fruit.hashCode());
 		
-        System.out.println(fruit.vitamin.type);
-		System.out.println(fruit.vitamin.waterSoluble);
-		System.out.println(fruit.vitamin.fatSoluble);
-		fruit.provideEnergy();
-
-
+		Fruit fruit1 = context.getBean(Fruit.class);
+		System.out.println(fruit1.hashCode());
+		
+		Fruit fruit2 = context.getBean(Fruit.class);
+		System.out.println(fruit2.hashCode());
+		
 	}
 
 }

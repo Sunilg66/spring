@@ -12,6 +12,7 @@
 		<constructor-arg name="vitamin" ref="vitaminId" />
 
 	</bean>
+	
 	<bean class="com.xworkz.fruit.Vitamin" id="vitaminId">
 		<constructor-arg name="type" value="Vitamin A" />
 		<constructor-arg name="waterSoluble" value="true" />
